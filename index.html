@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <header class="navbar">
+        <div class="nav-content">
+            <i class="fa-solid fa-car"></i>
+            <h1>Autos pequeños</h1>
+            <nav class="nav">
+                <a href="#">Inicio</a>
+                <a href="#">Catálogo</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de filtros de búsqueda -->
+    <section class="search">
+        <label for="filter">Ordenar por:</label>
+        <select id="filter" name="filter">
+            <option value="precio">Precio</option>
+            <option value="categoria">Categoría</option>
+        </select>
+    </section>
+
+    <!-- Sección Principal -->
+    <main class="main">
+        <div class="cards">
+ 
+            <!-- mobile -->
+             <!-- <div class="cardMobi"><img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt=""> -->
+
+                <div class="cardMobi">
+                    <img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>$100.00</p>
+                    <button>Comprar</button>
+             </div>
+             
+             <!-- desktop -->
+    
+    
+             <div class="cardtablet"><img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt=""></div>
+             <h3>Producto 1</h3>
+             <p>$100.00</p>
+             <button>Comprar</button>
+
+             <div class="cardesk"><img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt=""></div>
+             <h3>Producto 1</h3>
+             <p>$100.00</p>
+             <button>Comprar</button>
+
+             <div class="cardesk"><img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt=""></div>
+             <h3>Producto 1</h3>
+             <p>$100.00</p>
+             <button>Comprar</button>
+
+             <div class="cardesk"><img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt=""></div>
+             <h3>Producto 1</h3>
+             <p>$100.00</p>
+             <button>Comprar</button>
+
+             <div class="cardesk"><img src="./assets/img/ape-auto-dx-passenger-auto-1000x1000.jpg" alt=""></div>
+             <h3>Producto 1</h3>
+             <p>$100.00</p>
+             <button>Comprar</button>
+
+             
+        </div>
+    
+       <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">&raquo;</a>
+    
+    
+       </div>
+
+
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>Todos los derechos reservados © 2024</p>
+    </footer>
+
+</body>
+</html>

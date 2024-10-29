@@ -1,0 +1,186 @@
+/* Estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        'navbar'
+        'search'
+        'main'
+        'footer';
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Estilos generales para secciones */
+.navbar, .search, .main, .footer {
+    padding: 1rem;
+}
+
+/* Menú de navegación */
+.navbar {
+    grid-area: navbar;
+    background-color: #6e0a0a;
+    color: #fff;
+    display: flex;
+    
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px ;
+}
+
+.nav-content nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+.nav{
+    display: none;
+}
+
+/* Sección de filtros de búsqueda */
+.search {
+    grid-area: search;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search label {
+    font-weight: bold;
+}
+
+.search select {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 80%;
+}
+
+/* Sección Principal */
+.main {
+    grid-area: main;
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cards {
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 50%; /* Ajuste de ancho */
+    text-align: center;
+    
+}
+
+.cardesk {
+    display: none; /* Oculta por defecto */
+}
+
+.cardMobi {
+    border: 0.5px solid rgb(10, 153, 29);
+    padding: 1rem; /* Agrega padding para que se vea mejor */
+}
+
+.cardMobi img {
+    width: 100%; /* Ajusta la imagen al contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo de botón */
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Cambio de color al pasar el mouse */
+}
+
+/* Pie de página */
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Layout para tablets (>= 576px y < 992px) */
+@media (min-width: 576px) and (max-width: 991px) {
+    body {
+        grid-template-areas: 
+            'navbar navbar'
+            'search main'
+            'footer footer';
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .navbar, .search, .main, .footer {
+        padding: 1rem 2rem;
+    }
+
+    .cardtablet {
+        display: flex; /* Muestra las tarjetas en tablet */
+        border: 0.5px solid rgb(10, 153, 29);
+        padding: 1rem; /* Agrega padding */
+        margin: 10px 0; /* Margen entre tarjetas */
+        flex-direction: column; /* Coloca los elementos en columna */
+        width: 100%; /* Ajusta el ancho */
+    }
+}
+
+/* Layout para escritorio (>= 992px) */
+@media (min-width: 992px) {
+    body {
+        grid-template-areas: 
+            'navbar navbar'
+            'search main'
+            'footer footer';
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .navbar, .search, .main, .footer {
+        padding: 1rem 3rem;
+    }
+
+    .cardtablet {
+        display: flex;
+        border: 0.5px solid rgb(10, 153, 29);
+        padding: 1rem;
+        margin: 10px 0; /* Margen entre tarjetas */
+        flex-direction: column; /* Coloca los elementos en columna */
+    }
+
+    .cardesk {
+        display: flex; /* Muestra las tarjetas en escritorio */
+        border: 0.5px solid rgb(10, 153, 29);
+        flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
+        gap: 1rem; /* Espacio entre tarjetas */
+        padding: 1rem;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: right;
+
+    }
+}
